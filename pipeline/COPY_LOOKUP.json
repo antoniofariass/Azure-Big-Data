@@ -32,7 +32,7 @@
 						"parameters": {
 							"container_name": "raw",
 							"directory_name": "dataside",
-							"file_name": "plan_cor.csv",
+							"file_name": "plan_cor.xlsx",
 							"delimeter": ";"
 						}
 					}
