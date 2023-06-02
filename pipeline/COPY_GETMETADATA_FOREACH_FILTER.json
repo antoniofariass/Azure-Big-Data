@@ -112,7 +112,22 @@
 										"type": "DelimitedTextReadSettings"
 									}
 								},
-								"enableStaging": false
+								"sink": {
+									"type": "AzureSqlSink",
+									"writeBehavior": "insert",
+									"sqlWriterUseTableLock": false,
+									"tableOption": "autoCreate",
+									"disableMetricsCollection": false
+								},
+								"enableStaging": false,
+								"translator": {
+									"type": "TabularTranslator",
+									"typeConversion": true,
+									"typeConversionSettings": {
+										"allowDataTruncation": true,
+										"treatBooleanAsNumber": false
+									}
+								}
 							},
 							"inputs": [
 								{
@@ -129,6 +144,19 @@
 											"type": "Expression"
 										},
 										"delimeter": ";"
+									}
+								}
+							],
+							"outputs": [
+								{
+									"referenceName": "ds_gen_azuresql",
+									"type": "DatasetReference",
+									"parameters": {
+										"schema_name": "SalesLT",
+										"table_name": {
+											"value": "@replace(item().name,'.txt','' )",
+											"type": "Expression"
+										}
 									}
 								}
 							]
