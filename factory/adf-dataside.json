@@ -1,0 +1,9 @@
+{
+	"name": "adf-dataside",
+	"location": "eastus2",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "9227f5e7-1643-49cf-bf02-e424f899f55d",
+		"tenantId": "85344c0f-07ce-4db2-a265-0bcfdce6f1d5"
+	}
+}

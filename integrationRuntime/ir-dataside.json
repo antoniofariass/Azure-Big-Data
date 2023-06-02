@@ -1,0 +1,6 @@
+{
+	"name": "ir-dataside",
+	"properties": {
+		"type": "SelfHosted"
+	}
+}
